@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer> </script>
+
+    <link rel="stylesheet" href="assests/css/output.css">
+
+    <style>
+        body {
+            /* overflow: hidden; */
+            --tw-bg-opacity: 1;
+            background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+            font-family: "Inter var", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            margin: 0px;
+            line-height: inherit;
+        }
+
+        .bbm {
+            --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        #app {
+            display: contents;
+        }
+
+        .t {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0px;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0px, 0px, 0px, 0px);
+            white-space: nowrap;
+            border-width: 0px;
+        }
+    </style>
+</head>
+<!-- max-[700px]:left-[-288px] -->
+
+<body>
+    <div id="app">
+        <div class="bg-[#FFFFFF] dark:bg-darkbackground">
+            <div>
+                <div class="fixed top-0 bottom-0 z-50 flex w-72 flex-row  max-[700px]:-translate-x-full transition duration-300 ease-in-out"
+                    id="leftside">
+                    <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-[#111827] px-6 pb-4">
+                        <div class="flex h-16 shrink-0 items-center">
+                            <img class="h-8 w-auto max-w-full block"
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500"
+                                alt="Your Company">
+                        </div>
+                        <nav class="flex flex-1 flex-col">
+                            <ul role="list" class="flex flex-1 flex-col gap-y-7 list-none m-0 p-0">
+                                <li>
+                                    <ul role="list" class="-mx-2 abo">
+                                        <li>
+                                            <a href=""
+                                                class="bg-[#1F2937] text-[#FFFFFF] flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-home">
+                                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                                </svg>Dashboard</a>
+                                        </li>
+                                        <li><a href="#"
+                                                class="text-[#969da9] hover:bg-[#1F2937] hover:text-[#FFFFFF] blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-users">
+                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                    <circle cx="9" cy="7" r="4" />
+                                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                </svg>Teams</a></li>
+                                        <li><a href="#"
+                                                class="text-[#969da9]  hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-folder-closed">
+                                                    <path
+                                                        d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+                                                    <path d="M2 10h20" />
+                                                </svg>Projects</a></li>
+                                        <li><a href="#"
+                                                class="text-[#969da9]  hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="22"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-calendar">
+                                                    <path d="M8 2v4" />
+                                                    <path d="M16 2v4" />
+                                                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                                                    <path d="M3 10h18" />
+                                                </svg>Calendar</a></li>
+                                        <li><a href="#"
+                                                class="text-[#969da9]  hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="22"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-files">
+                                                    <path d="M20 7h-3a2 2 0 0 1-2-2V2" />
+                                                    <path
+                                                        d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z" />
+                                                    <path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8" />
+                                                </svg>Documents</a></li>
+                                        <li><a href="#"
+                                                class="text-[#969da9]  hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                                    class="h-6 w-6 shrink-0">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"></path>
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"></path>
+                                                </svg>Reports</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="awb font-semibold leading-6 pl-2 axo text-[14px] text-[#969da9]">Your teams</div>
+                                    <ul role="list" class="ga lb abo">
+                                        <li><a href="#"
+                                                class="text-[#969da9] hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"><span
+                                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border-2 border-[#374151]  bg-[#1F2937] text-[10px] font-medium text-[#969da9] brz">H</span><span
+                                                    class="adl">Heroicons</span></a></li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-[#969da9] hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 border-white text-sm leading-6 font-semibold">
+                                                <span
+                                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg  border-2 border-[#374151] bg-[#1F2937] text-[10px] font-medium text-[#949dab] brz">T</span>
+                                                    <span
+                                                    class="adl">Tailwind Labs</span></a></li>
+                                        <li><a href="#"
+                                                class="text-[#969da9]  hover:bg-[#1F2937] hover:text-[#FFFFFF]  blt bij bqe flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"><span
+                                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border-2 border-[#374151] bg-[#1F2937] text-[10px] font-medium text-[#969da9] brz">W</span><span
+                                                    class="adl">Workcation</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="mt-auto"><a href="pages/form/index.html"
+                                        class="bqe ga flex gap-x-3 rounded-md  hover:bg-[#1F2937] hover:text-[#FFFFFF]  p-2 text-sm font-semibold leading-6 text-[#969da9] bij blt"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                            class="h-6 w-6 shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z">
+                                            </path>
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>Settings</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="fixed left-72 h-full border hidden min-[700px]:hidden w-[150%] bg-[#111827] opacity-70"
+                        id="closediv" onclick="closesidebar()">
+                        <button type="button" class="-m-3 p-3 text-[#ffffff] ml-2 mt-2">
+                            <span class="t">Close sidebar</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                class="w-7 h-7 bag">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="pl-72 max-[700px]:pl-0">
+                    <style>
+                        @media (max-width: 700px) {
+                            #openicon{
+                                display: block;
+                            }
+                        }
+                    </style>
+                    <div
+                        class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-y border-[#e5e7eb] bg-[#ffffff] px-4 bbm dark:bg-darkbackground dark:border-darkborder  dark:text-darktext gap-x-6 px-6 px-8">
+                        <button type="button"
+                            class="-m-3 p-3 text-[#374151] transition duration-150 ease-in-out hidden"
+                            id="openicon" onclick="opensidebar()">
+                            <span class="t">Open sidebar</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
+                                </path>
+                            </svg>
+                        </button>
+                        
+                        <div class="md block h-6 w-[1px] bg-[#e7e7e9] hidden max-[700px]:block" aria-hidden="true">
+                        </div>
+                        <div class="flex flex-1 gap-x-4 self-stretch gap-x-6">
+                            <form class="relative flex  flex-1" action="#" method="GET">
+                                <label for="search-field dark:text-darktext" class="t">Search</label>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="pointer-events-none absolute text-[#9ca3af] top-0 bottom-0 left-0 h-full w-5 axo">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="m21 21-4.3-4.3" />
+                                </svg>
+
+                                <input id="search-field"
+                                    class="block h-full dark:bg-darkbackground dark:text-darktext w-full border-0 py-0 pl-8 pr-0 text-[#111827] outline-none bgc bnb text-sm"
+                                    placeholder="Search..." type="search" name="search">
+                            </form>
+                            <div class="flex items-center gap-x-4 gap-x-6">
+                                <button type="button" class="-m-3 p-3 text-[#969da9] bkw">
+                                    <span class="t">View
+                                        notifications</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-bell">
+                                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                                    </svg>
+                                </button>
+                                <div class="md block h-6 w-[1px] bg-[#e7e7e9]" aria-hidden="true"></div>
+                                <div class="relative" data-headlessui-state="">
+                                    <button class="-m-2 dropbtn flex items-center aqm" id="headlessui-menu-button-1"
+                                        type="button" aria-haspopup="menu" aria-expanded="false"
+                                        data-headlessui-state="" onclick="dropdowntoggleP5()">
+                                        <span class="t dropbtn">Open user
+                                            menu</span>
+                                        <img class="h-8 w-8 dropbtn rounded-full bg-[#faf9fb]"
+                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                            alt="">
+                                        <span class="md  dropbtn flex items-center max-[700px]:hidden">
+                                            <span class="ml-4 text-sm dropbtn font-semibold leading-6 axu"
+                                                aria-hidden="true">Tom Cook</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor" aria-hidden="true"
+                                                class="ml-2 dropbtn h-5 w-5 text-[#a6a9af]">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <ul id="listboxP5"
+                                        class="hidden absolute top-7 right-0 z-10 mt-1 max-h-86 w-[150px] bg-[#ffffff] overflow-auto py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm whitespace-nowrap rounded-md border border-input dark:border-darkborder bg-lightbackground dark:bg-darkbackground px-1 shadow-sm ring-offset-background placeholder:text-[#71717a]  focus:ring-1 focus:ring-ring"
+                                        tabindex="-1" role="listbox" aria-labelledby="listbox-label"
+                                        aria-activedescendant="listbox-option-3">
+                                        <li class="text-card-foreground dark:hover:bg-accent dark:text-darktext relative cursor-default select-none py-1 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                            id="listbox-option-0" role="option">
+                                            <div class="nav-linkP5 flex items-center">
+                                                <span class="font-normal  block truncate">Your Profile</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="text-card-foreground dark:text-darktext relative cursor-default select-none py-1 hover:bg-[#f4f4f5] dark:hover:bg-accent hover:text-[#18181b] px-1 rounded-md"
+                                            id="listbox-option-0" role="option">
+                                            <div class="nav-linkP5 flex items-center">
+
+
+                                                <span class="font-normal  block truncate">Sign Out</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="z-50 inline-flex items-center justify-center whitespace-nowrap ">
+                                    <div
+                                        class="relative rounded-md text-sm  border dark:border-darkborder border-input dark:border-darkborder dark:border-darkborder bg-lightbackground dark:bg-darkbackground z-50">
+                                        <div class="dropbtn hover:cursor-pointer p-2" onclick="themedropdown()">
+                                            <svg width="20" height="20" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" id="sunsvg"
+                                                class="dropbtn pointer-events-none text-card-foreground dark:text-darktext h-[1.2rem] w-[1.2rem]  rotate-0 scale-100 ">
+                                                <path
+                                                    d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z"
+                                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg width="20" height="20" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" id="moonsvg"
+                                                class="dropbtn hidden pointer-events-none h-[1.2rem] w-[1.2rem] text-card-foreground dark:text-darktext  rotate-0 scale-100 ">
+                                                <path
+                                                    d="M2.89998 0.499976C2.89998 0.279062 2.72089 0.0999756 2.49998 0.0999756C2.27906 0.0999756 2.09998 0.279062 2.09998 0.499976V1.09998H1.49998C1.27906 1.09998 1.09998 1.27906 1.09998 1.49998C1.09998 1.72089 1.27906 1.89998 1.49998 1.89998H2.09998V2.49998C2.09998 2.72089 2.27906 2.89998 2.49998 2.89998C2.72089 2.89998 2.89998 2.72089 2.89998 2.49998V1.89998H3.49998C3.72089 1.89998 3.89998 1.72089 3.89998 1.49998C3.89998 1.27906 3.72089 1.09998 3.49998 1.09998H2.89998V0.499976ZM5.89998 3.49998C5.89998 3.27906 5.72089 3.09998 5.49998 3.09998C5.27906 3.09998 5.09998 3.27906 5.09998 3.49998V4.09998H4.49998C4.27906 4.09998 4.09998 4.27906 4.09998 4.49998C4.09998 4.72089 4.27906 4.89998 4.49998 4.89998H5.09998V5.49998C5.09998 5.72089 5.27906 5.89998 5.49998 5.89998C5.72089 5.89998 5.89998 5.72089 5.89998 5.49998V4.89998H6.49998C6.72089 4.89998 6.89998 4.72089 6.89998 4.49998C6.89998 4.27906 6.72089 4.09998 6.49998 4.09998H5.89998V3.49998ZM1.89998 6.49998C1.89998 6.27906 1.72089 6.09998 1.49998 6.09998C1.27906 6.09998 1.09998 6.27906 1.09998 6.49998V7.09998H0.499976C0.279062 7.09998 0.0999756 7.27906 0.0999756 7.49998C0.0999756 7.72089 0.279062 7.89998 0.499976 7.89998H1.09998V8.49998C1.09998 8.72089 1.27906 8.89997 1.49998 8.89997C1.72089 8.89997 1.89998 8.72089 1.89998 8.49998V7.89998H2.49998C2.72089 7.89998 2.89998 7.72089 2.89998 7.49998C2.89998 7.27906 2.72089 7.09998 2.49998 7.09998H1.89998V6.49998ZM8.54406 0.98184L8.24618 0.941586C8.03275 0.917676 7.90692 1.1655 8.02936 1.34194C8.17013 1.54479 8.29981 1.75592 8.41754 1.97445C8.91878 2.90485 9.20322 3.96932 9.20322 5.10022C9.20322 8.37201 6.82247 11.0878 3.69887 11.6097C3.45736 11.65 3.20988 11.6772 2.96008 11.6906C2.74563 11.702 2.62729 11.9535 2.77721 12.1072C2.84551 12.1773 2.91535 12.2458 2.98667 12.3128L3.05883 12.3795L3.31883 12.6045L3.50684 12.7532L3.62796 12.8433L3.81491 12.9742L3.99079 13.089C4.11175 13.1651 4.23536 13.2375 4.36157 13.3059L4.62496 13.4412L4.88553 13.5607L5.18837 13.6828L5.43169 13.7686C5.56564 13.8128 5.70149 13.8529 5.83857 13.8885C5.94262 13.9155 6.04767 13.9401 6.15405 13.9622C6.27993 13.9883 6.40713 14.0109 6.53544 14.0298L6.85241 14.0685L7.11934 14.0892C7.24637 14.0965 7.37436 14.1002 7.50322 14.1002C11.1483 14.1002 14.1032 11.1453 14.1032 7.50023C14.1032 7.25044 14.0893 7.00389 14.0623 6.76131L14.0255 6.48407C13.991 6.26083 13.9453 6.04129 13.8891 5.82642C13.8213 5.56709 13.7382 5.31398 13.6409 5.06881L13.5279 4.80132L13.4507 4.63542L13.3766 4.48666C13.2178 4.17773 13.0353 3.88295 12.8312 3.60423L12.6782 3.40352L12.4793 3.16432L12.3157 2.98361L12.1961 2.85951L12.0355 2.70246L11.8134 2.50184L11.4925 2.24191L11.2483 2.06498L10.9562 1.87446L10.6346 1.68894L10.3073 1.52378L10.1938 1.47176L9.95488 1.3706L9.67791 1.2669L9.42566 1.1846L9.10075 1.09489L8.83599 1.03486L8.54406 0.98184ZM10.4032 5.30023C10.4032 4.27588 10.2002 3.29829 9.83244 2.40604C11.7623 3.28995 13.1032 5.23862 13.1032 7.50023C13.1032 10.593 10.596 13.1002 7.50322 13.1002C6.63646 13.1002 5.81597 12.9036 5.08355 12.5522C6.5419 12.0941 7.81081 11.2082 8.74322 10.0416C8.87963 10.2284 9.10028 10.3497 9.34928 10.3497C9.76349 10.3497 10.0993 10.0139 10.0993 9.59971C10.0993 9.24256 9.84965 8.94373 9.51535 8.86816C9.57741 8.75165 9.63653 8.63334 9.6926 8.51332C9.88358 8.63163 10.1088 8.69993 10.35 8.69993C11.0403 8.69993 11.6 8.14028 11.6 7.44993C11.6 6.75976 11.0406 6.20024 10.3505 6.19993C10.3853 5.90487 10.4032 5.60464 10.4032 5.30023Z"
+                                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+
+                                        <ul id="listboxT"
+                                            class="hidden bg-[#ffffff] absolute z-50 mt-1 max-h-56 right-0 w-[100px] overflow-auto py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm whitespace-nowrap rounded-md border dark:border-darkborder border-input dark:border-darkborder dark:border-darkborder bg-lightbackground dark:bg-darkbackground px-1 shadow-sm ring-offset-background placeholder:text-[#71717a] dark:text-muted-foreground  focus:ring-1 focus:ring-ring"
+                                            tabindex="-1" role="listbox" aria-labelledby="listbox-label"
+                                            aria-activedescendant="listbox-option-3">
+
+                                            <li class="text-card-foreground dark:text-darktext dark:hover:text-accent-foreground  dark:hover:bg-accent relative z-50 cursor-default select-none py-1 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                id="listbox-option-0" role="option" onclick="lighttheme()">
+                                                <div class="nav-linkT flex items-center">
+                                                    <span class="font-normal  block truncate">Light</span>
+                                                </div>
+
+
+                                                <span id="ticklight"
+                                                    class="hidden text-[#71717a] dark:text-muted-foreground absolute inset-y-0 right-0 flex items-center px-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="13" width="10"
+                                                        viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                                    </svg>
+                                                </span>
+                                            </li>
+
+                                            <!-- More items... -->
+
+                                            <li class="text-card-foreground dark:text-darktext  dark:hover:text-accent-foreground  dark:hover:bg-accent relative z-50 cursor-default select-none py-1 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                id="listbox-option-0" role="option" onclick="darktheme()">
+                                                <div class="nav-linkT flex items-center">
+                                                    <span class="font-normal  block truncate">Dark</span>
+                                                </div>
+
+                                                <span id="tickdarkk"
+                                                    class="hidden text-[#9ca3af] dark:text-muted-foreground absolute inset-y-0 right-0 flex items-center px-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="13" width="10"
+                                                        viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                                    </svg>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <main class="py-3">
+                        <div class="px-2">
+                            <div
+                                class="relative overflow-hidden">
+                               
+                                <link rel="stylesheet" href="assests/css/output2.css">
+
+                                <div class="overflow-hidden rounded-[0.5rem] border dark:border-darkborder bg-background dark:bg-darkbackground shadow-md md:shadow-xl font-GeistSans">        
+                                    <div class="flex-col flex">
+                            
+                                        <!-- ******************************* header start ********************** -->
+                                        <div class="border-b dark:border-darkborder ">
+                                            <div
+                                                class="flex flex-row h-16 items-center px-4 max-[770px]:flex-wrap max-[770px]:h-32 max-[770px]:flex-col max-[770px]:justify-around">
+                                                <div class="relative">
+                            
+                                                    <button onclick="dropdowntoggle1()"
+                                                        class="dropbtn inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border dark:border-darkborder border-input bg-background shadow-sm dark:bg-transparent dark:text-darktext h-9 px-4 py-2 w-[200px] justify-between"
+                                                        role="combobox" aria-expanded="true" aria-label="Select a team" aria-haspopup="dialog"
+                                                        aria-controls="radix-:R6mnnlbq6la:" data-state="open">
+                                                        <span class="inline-flex dropbtn " id="selectedOption1">
+                                                            <span
+                                                                class="relative dropbtn flex shrink-0 overflow-hidden rounded-full mr-2 h-5 w-5">
+                                                                <img class="dropbtn aspect-square h-full w-full grayscale "
+                                                                    alt="Monsters Inc." src="https://avatar.vercel.sh/monsters.png">
+                                                            </span>
+                                                            <span class="dropbtn">Alicia Koch</span>
+                                                        </span>
+                            
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            class="pointer-events-none ml-auto h-4 w-4 shrink-0 opacity-50">
+                                                            <path
+                                                                d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                                                                fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </button>
+                            
+                                                    <ul id="listbox1"
+                                                        class="dropbtn hidden dropdown-content absolute z-10 left-0 mt-1 max-h-58 w-full overflow-auto py-1 text-base shadow-lg ring-1 dark:bg-darkbackground ring-black ring-opacity-5 focus:outline-none sm:text-sm whitespace-nowrap rounded-md border dark:border-darkborder border-input bg-[#ffffff] px-1 shadow-sm ring-offset-background placeholder:text-[#71717a] dark:text-muted-foreground  focus:ring-1 focus:ring-ring"
+                                                        tabindex="-1" role="listbox" aria-labelledby="listbox-label"
+                                                        aria-activedescendant="listbox-option-3">
+                            
+                            
+                                                        <li class="text-gray-900 relative cursor-default select-none py-0.6 px-1 rounded-md"
+                                                            id="listbox-option-0" role="option">
+                                                            <div class="dropbtn flex items-center border-b  px-3" cmdk-input-wrapper=""><svg
+                                                                    width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    class="dropbtn mr-2 h-4 w-4 shrink-0 opacity-50">
+                                                                    <path
+                                                                        d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+                                                                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <input id="myInput" onkeyup="myFunction()"
+                                                                    class="dropbtn flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-[#71717a] dark:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+                                                                    placeholder="Search team..." cmdk-input="" autocomplete="off" autocorrect="off"
+                                                                    spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true"
+                                                                    aria-controls=":rp:" aria-labelledby=":rq:" type="text" value="">
+                                                            </div>
+                                                        </li>
+                            
+                                                        <div class="dropbtn font-medium text-[#71717a] dark:text-muted-foreground pl-3 pt-2" cmdk-group-heading=""
+                                                            aria-hidden="true" id=":rt:">Personal Account</div>
+                            
+                                                        <li class="text-gray-900 relative w-full cursor-default select-none py-0.6 hover:bg-[#f4f4f5] hover:text-[#18181b] dark:hover:bg-accent px-1 rounded-md"
+                                                            id="listbox-option-0" role="option">
+                                                            <div cmdk-group-items="" role="group" aria-labelledby=":rt:">
+                                                                <div class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 outline-none  data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-sm"
+                                                                    cmdk-item="" role="option" data-value="scalicia koch" aria-selected="true"
+                                                                    data-selected="true">
+                                                                    <span class="nav-link w-full inline-flex hover:cursor-pointer">
+                                                                        <span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full mr-2 h-5 w-5">
+                                                                            <img class="aspect-square h-full w-full grayscale" alt="Alicia Koch"
+                                                                                src="https://avatar.vercel.sh/personal.png">
+                                                                        </span>
+                                                                        <a href="" class="dropbtn dark:text-darktext">Alicia Koch</a>
+                                                                    </span>
+                            
+                                                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg" class="ml-auto h-4 w-4 opacity-100">
+                                                                        <path
+                                                                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                                                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                                                    </svg>
+                            
+                                                                </div>
+                            
+                            
+                                                            </div>
+                            
+                                                        </li>
+                            
+                                                        <div class="dropbtn font-medium text-[#71717a] dark:text-muted-foreground pl-3 pt-2" cmdk-group-heading="" aria-hidden="true"
+                                                            id=":rt:">Teams</div>
+                            
+                                                        <li class="text-gray-900 relative w-full cursor-default select-none py-0.6 hover:bg-[#f4f4f5] hover:text-[#18181b] dark:hover:bg-accent px-1 rounded-md"
+                                                            id="listbox-option-0" role="option">
+                                                            <div cmdk-group-items="" role="group" aria-labelledby=":rt:">
+                                                                <div class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 outline-none  data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-sm"
+                                                                    cmdk-item="" role="option" data-value="scalicia koch" aria-selected="true"
+                                                                    data-selected="true">
+                                                                    <span class="nav-link w-full inline-flex hover:cursor-pointer">
+                                                                        <span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full mr-2 h-5 w-5">
+                                                                            <img class="aspect-square h-full w-full grayscale" alt="Alicia Koch"
+                                                                                src="https://avatar.vercel.sh/personal.png">
+                                                                        </span>
+                                                                        <a href="" class="dropbtn dark:text-darktext">Acme Inc</a>
+                                                                    </span>
+                            
+                                                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class=" hidden ml-auto h-4 w-4 opacity-100">
+                                                                        <path
+                                                                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                                                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                                                    </svg>
+                                                                </div>
+                            
+                                                            </div>
+                            
+                            
+                            
+                                                        </li>
+                            
+                                                        <li class="text-gray-900 relative w-full cursor-default select-none py-0.6 hover:bg-[#f4f4f5] hover:text-[#18181b] dark:hover:bg-accent px-1 rounded-md"
+                                                            id="listbox-option-0" role="option">
+                                                            <div cmdk-group-items="" role="group" aria-labelledby=":rt:">
+                                                                <div class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 outline-none  data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-sm"
+                                                                    cmdk-item="" role="option" data-value="scalicia koch" aria-selected="true"
+                                                                    data-selected="true">
+                                                                    <span class="nav-link w-full inline-flex hover:cursor-pointer">
+                                                                        <span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full mr-2 h-5 w-5">
+                                                                            <img class="aspect-square h-full w-full grayscale" alt="Alicia Koch"
+                                                                                src="https://avatar.vercel.sh/personal.png">
+                                                                        </span>
+                                                                        <a href="" class="dropbtn dark:text-darktext">Monsters Inc</a>
+                                                                    </span>
+                            
+                                                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class=" hidden ml-auto h-4 w-4 opacity-100">
+                                                                        <path
+                                                                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                                                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                                                    </svg>
+                            
+                                                                </div>
+                            
+                            
+                                                            </div>
+                            
+                            
+                            
+                                                        </li>
+                                                        <div role="separator" aria-orientation="horizontal" class="-mx-1 my-1 h-px bg-gray-100">
+                                                        </div>
+                            
+                                                        <li class="text-gray-900 relative cursor-default select-none py-0.3 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                            id="listbox-option-0" role="option">
+                                                            <div class="max-h-[300px] overflow-y-auto overflow-x-hidden" cmdk-list="" role="listbox"
+                                                                aria-label="Suggestions" id=":rp:" aria-labelledby=":rr:"
+                                                                style="--cmdk-list-height: 38.0px;">
+                                                                <div cmdk-list-sizer="">
+                                                                    <div class="overflow-hidden p-1 text-foreground [&amp;_[cmdk-group-heading]]:px-2 [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-[#71717a] dark:text-muted-foreground"
+                                                                        cmdk-group="" role="presentation" data-value="undefined">
+                                                                        <div cmdk-group-items="" role="group">
+                                                                            <div class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none  data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                                                                                type="button" aria-haspopup="dialog" aria-expanded="false"
+                                                                                aria-controls="radix-:Rmnnlbq6la:" data-state="closed" cmdk-item=""
+                                                                                role="option" data-value="create team"><svg width="15" height="15"
+                                                                                    viewBox="0 0 15 15" fill="none"
+                                                                                    xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5">
+                                                                                    <path
+                                                                                        d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM7.50003 4C7.77617 4 8.00003 4.22386 8.00003 4.5V7H10.5C10.7762 7 11 7.22386 11 7.5C11 7.77614 10.7762 8 10.5 8H8.00003V10.5C8.00003 10.7761 7.77617 11 7.50003 11C7.22389 11 7.00003 10.7761 7.00003 10.5V8H4.50003C4.22389 8 4.00003 7.77614 4.00003 7.5C4.00003 7.22386 4.22389 7 4.50003 7H7.00003V4.5C7.00003 4.22386 7.22389 4 7.50003 4Z"
+                                                                                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                                                    </path>
+                                                                                </svg>Create Team</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                            
+                                                </div>
+                            
+                                                <nav class="flex items-center space-x-4 lg:space-x-6 mx-6"><a
+                                                        class="text-sm  text-black font-semibold  dark:text-darktext hover:text-black" href="#">Overview</a><a
+                                                        class="text-sm font-medium text-[#71717a] dark:text-muted-foreground  transition-colors hover:text-black"
+                                                        href="#">Customers</a><a
+                                                        class="text-sm font-medium text-[#71717a] dark:text-muted-foreground   transition-colors hover:text-black"
+                                                        href="#">Products</a><a
+                                                        class="text-sm font-medium text-[#71717a] dark:text-muted-foreground  transition-colors hover:text-black"
+                                                        href="#">Settings</a></nav>
+                                                <div class="ml-auto flex items-center space-x-4 max-[770px]:ml-0">
+                                                    <div><input type="search"
+                                                            class="flex h-9 w-full rounded-md border dark:border-darkborder border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#71717a] dark:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:w-[100px] lg:w-[300px]"
+                                                            placeholder="Search..."></div>
+                                                    <div class="relative">
+                            
+                                                        <button
+                                                            class="dropbtn inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-8 rounded-full"
+                                                            type="button" id="radix-:R5mnnlbq6la:" aria-haspopup="menu" aria-expanded="false"
+                                                            data-state="closed" onclick="dropdowntoggle()"><span
+                                                                class="dropbtn relative flex shrink-0 overflow-hidden rounded-full h-8 w-8"><img
+                                                                    class="dropbtn aspect-square h-full w-full" alt="@shadcn"
+                                                                    src="assests/images/profile.png"></span>
+                                                        </button>
+                            
+                            
+                                                        <ul id="listbox"
+                                                            class="hidden dropbtn1 dropdown-content1 absolute z-10 right-0 max-h-58 w-[280px] overflow-auto py-1 text-base shadow-lg ring-1  dark:bg-darkbackground ring-black ring-opacity-5 focus:outline-none sm:text-sm whitespace-nowrap rounded-md border dark:border-darkborder border-input bg-[#ffffff] px-1 shadow-sm ring-offset-background placeholder:text-[#71717a] dark:text-muted-foreground  focus:ring-1 focus:ring-ring"
+                                                            tabindex="-1" role="listbox" aria-labelledby="listbox-label"
+                                                            aria-activedescendant="listbox-option-3">
+                            
+                            
+                                                            <li class="text-gray-900 relative dark:hover:bg-accent cursor-default select-none py-0.6 px-1 rounded-md"
+                                                                id="listbox-option-0" role="option">
+                                                                <div class="px-2 py-1.5 text-sm font-normal">
+                                                                    <div class="flex flex-col space-y-1">
+                                                                        <p class="text-sm font-medium dark:text-darktext leading-none">shadcn</p>
+                                                                        <p class="text-xs leading-none text-[#71717a] dark:text-muted-foreground">m@example.com</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div role="separator" aria-orientation="horizontal"
+                                                                    class="-mx-1 my-1 h-px bg-gray-100">
+                                                                </div>
+                                                            </li>
+                            
+                                                            <li class="text-gray-900 relative  dark:hover:bg-accent cursor-default select-none py-0.6 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                                onclick="dropdowntoggle()" id="listbox-option-0" role="option">
+                                                                <div role="menuitem"
+                                                                    class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground dark:text-darktext data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                                                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                                                    Profile<span class="ml-auto text-xs dark:text-darktext tracking-widest opacity-60">⇧⌘P</span></div>
+                                                            </li>
+                            
+                                                            <li class="text-gray-900 relative dark:hover:bg-accent cursor-default select-none py-0.3 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                                onclick="dropdowntoggle()" id="listbox-option-0" role="option">
+                                                                <div role="menuitem"
+                                                                    class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground dark:text-darktext data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                                                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                                                    Billing<span class="ml-auto text-xs dark:text-darktext tracking-widest opacity-60">⌘B</span></div>
+                                                            </li>
+                            
+                                                            <li class="text-gray-900 relative dark:hover:bg-accent cursor-default select-none py-0.3 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                                onclick="dropdowntoggle()" id="listbox-option-0" role="option">
+                                                                <div role="menuitem"
+                                                                    class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground dark:text-darktext data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                                                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                                                    Settings<span class="ml-auto text-xs dark:text-darktext tracking-widest opacity-60">⌘S</span></div>
+                                                            </li>
+                            
+                                                            <li class="text-gray-900 relative dark:hover:bg-accent cursor-default select-none py-0.3 hover:bg-[#f4f4f5] hover:text-[#18181b] px-1 rounded-md"
+                                                                onclick="dropdowntoggle()" id="listbox-option-0" role="option">
+                                                                <div role="menuitem"
+                                                                    class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground dark:text-darktext data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                                                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">New Team
+                                                                </div>
+                                                            </li>
+                            
+                            
+                                                            <li class="text-gray-900 relative cursor-default dark:hover:bg-accent select-none py-0.6 px-1 hover:bg-[#f4f4f5] hover:text-[#18181b] dark: rounded-md"
+                                                                id="listbox-option-0" role="option">
+                                                                <div role="separator" aria-orientation="horizontal"
+                                                                    class="-mx-1 my-1 h-px bg-muted"></div>
+                                                                <div role="menuitem"
+                                                                    class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none  dark:text-darktext transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                                                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">Log
+                                                                    out<span class="ml-auto text-xs dark:text-darktext tracking-widest opacity-60">⇧⌘Q</span></div>
+                                                            </li>
+                            
+                                                        </ul>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- ******************************* header End ********************** -->
+                            
+                                        <!-- ******************************* Dashboard start ********************** -->
+                            
+                                        <div class="flex-1 space-y-4 p-8 pt-6">
+                                            <!-- ******************************* Row 1 start ********************** -->
+                            
+                                            <div class="flex items-center justify-between space-y-2 max-[600px]:flex-wrap ">
+                                                <h2 class="text-3xl font-bold tracking-tight dark:text-darktext">Dashboard</h2>
+                                                <div class="flex items-center space-x-2 max-[410px]:flex-wrap">
+                                                    <div class="grid gap-2 mt-1">
+                                                        <!-- date -->
+                                                        <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
+                                                            <div class="container">
+                                                                <div class="">
+                                                                    <div class="relative">
+                            
+                                                                        <input type="hidden" name="date" x-ref="date" :value="datepickerValue" />
+                                                                        <input type="text" x-on:click="showDatepicker = !showDatepicker"
+                                                                            x-model="datepickerValue" x-on:keydown.escape="showDatepicker = false"
+                                                                            class="w-[170px] pl-10 pr-10 py-3 h-10 leading-none rounded-md shadow-sm text-sm ring-offset-background transition-colors focus-visible:outline-none  disabled:pointer-events-none disabled:opacity-50 border dark:border-darkborder border-input  bg-[#ffffff] hover:bg-[#f4f4f5] dark:hover:bg-darkbackground dark:text-darktext dark:bg-transparent hover:text-[#18181b] dark:hover:text-darktext"
+                                                                            placeholder="Select date" readonly />
+                            
+                                                                        <div class="absolute top-0 left-0 px-3 py-3">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                                class="mr-2 h-4 dark:text-darktext w-4">
+                                                                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                                                                <line x1="16" x2="16" y1="2" y2="6"></line>
+                                                                                <line x1="8" x2="8" y1="2" y2="6"></line>
+                                                                                <line x1="3" x2="21" y1="10" y2="10"></line>
+                                                                            </svg>
+                                                                        </div>
+                            
+                                                                        <!-- <div x-text="no_of_days.length"></div>
+                                                                  <div x-text="32 - new Date(year, month, 32).getDate()"></div>
+                                                                  <div x-text="new Date(year, month).getDay()"></div> -->
+                            
+                                                                        <div class="bg-[#ffffff] dark:bg-[#09090b] mt-12 rounded-lg shadow p-4 h-30rem absolute top-0 left-0"
+                                                                            style="width: 17rem" x-show.transition="showDatepicker"
+                                                                            @click.away="showDatepicker = false">
+                                                                            <div class="flex justify-between items-center mb-2">
+                                                                                <div>
+                                                                                    <span x-text="MONTH_NAMES[month]"
+                                                                                        class="text-lg font-bold dark:text-darktext  text-gray-800"></span>
+                                                                                    <span x-text="year"
+                                                                                        class="ml-1 text-lg dark:text-darktext  text-gray-600 font-normal"></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <button type="button"
+                                                                                        class="focus:outline-none focus:shadow-outline transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-100 p-1 rounded-full"
+                                                                                        @click="if (month == 0) {
+                                                                              year--;
+                                                                              month = 12;
+                                                                            } month--; getNoOfDays()">
+                                                                                        <svg class="h-6 w-6   text-gray-400 inline-flex" fill="none"
+                                                                                            viewBox="0 0 24 24" stroke="currentColor">
+                                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                                                stroke-width="2" d="M15 19l-7-7 7-7" />
+                                                                                        </svg>
+                                                                                    </button>
+                                                                                    <button type="button"
+                                                                                        class="focus:outline-none focus:shadow-outline transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-100 p-1 rounded-full"
+                                                                                        @click="if (month == 11) {
+                                                                              month = 0; 
+                                                                              year++;
+                                                                            } else {
+                                                                              month++; 
+                                                                            } getNoOfDays()">
+                                                                                        <svg class="h-6 w-6 text-gray-400 dark:text-darktext inline-flex" fill="none"
+                                                                                            viewBox="0 0 24 24" stroke="currentColor">
+                                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                                                stroke-width="2" d="M9 5l7 7-7 7" />
+                                                                                        </svg>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                            
+                                                                            <div class="flex flex-wrap mb-3 -mx-1">
+                                                                                <template x-for="(day, index) in DAYS" :key="index">
+                                                                                    <div style="width: 14.26%" class="px-0.5">
+                                                                                        <div x-text="day"
+                                                                                            class="text-gray-800 dark:text-darktext  font-medium text-center text-xs">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </template>
+                                                                            </div>
+                            
+                                                                            <div class="flex flex-wrap -mx-1">
+                                                                                <template x-for="blankday in blankdays">
+                                                                                    <div style="width: 14.28%"
+                                                                                        class="text-center border dark:text-darktext  p-1 border-transparent text-sm">
+                                                                                    </div>
+                                                                                </template>
+                                                                                <template x-for="(date, dateIndex) in no_of_days" :key="dateIndex">
+                                                                                    <div style="width: 14.28%" class="px-1 mb-1">
+                                                                                        <div @click="getDateValue(date)" x-text="date"
+                                                                                            class="cursor-pointer text-center text-sm leading-none rounded-full leading-loose transition ease-in-out py-2 dark:text-darktext  duration-100"
+                                                                                            :class="{
+                                                                            'bg-[#18181b]': isToday(date) == true, 
+                                                                            'text-gray-600 hover:bg-indigo-200': isToday(date) == false && isSelectedDate(date) == false,
+                                                                            'bg-[#18181b] dark:bg-darktext text-white dark:text-black hover:bg-opacity-75': isSelectedDate(date) == true 
+                                                                          }"></div>
+                                                                                    </div>
+                                                                                </template>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- date -->
+                            
+                                                    </div>
+                                                    <button
+                                                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white  shadow dark:bg-darktext dark:text-darkbackground font-semibold hover:bg-primary/90 h-9 px-4 py-2 max-[410px]:mt-3">Download</button>
+                            
+                                                         
+                                                </div>
+                                            </div>
+                            
+                                            <!-- ******************************* Row 1 End ********************** -->
+                            
+                                            <div dir="ltr" data-orientation="horizontal" class="space-y-4">
+                            
+                                                <!-- *******************************  Row 2 start ********************** -->
+                            
+                                                <div role="tablist" aria-orientation="horizontal"
+                                                    class="inline-flex h-9 items-center justify-center rounded-lg bg-gray-100 dark:bg-muted p-1 text-[#71717a] dark:text-muted-foreground max-[390px]:flex-wrap max-[390px]:justify-start max-[390px]:mb-5"
+                                                    tabindex="0" data-orientation="horizontal" style="outline:none"><button type="button" role="tab"
+                                                        aria-selected="true" aria-controls="radix-:R1annlbq6la:-content-overview"
+                                                        data-state="active" id="radix-:R1annlbq6la:-trigger-overview"
+                                                        class="inline-flex items-center justify-center  whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:text-darktext dark:bg-[#09090b] bg-[#ffffff] text-darkbackground "
+                                                        tabindex="-1" data-orientation="horizontal"
+                                                        data-radix-collection-item="">Overview</button><button type="button" role="tab"
+                                                        aria-selected="false" aria-controls="radix-:R1annlbq6la:-content-analytics"
+                                                        data-state="inactive" data-disabled="" disabled=""
+                                                        id="radix-:R1annlbq6la:-trigger-analytics"
+                                                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                                                        tabindex="-1" data-orientation="horizontal"
+                                                        data-radix-collection-item="">Analytics</button><button type="button" role="tab"
+                                                        aria-selected="false" aria-controls="radix-:R1annlbq6la:-content-reports"
+                                                        data-state="inactive" data-disabled="" disabled="" id="radix-:R1annlbq6la:-trigger-reports"
+                                                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                                                        tabindex="-1" data-orientation="horizontal"
+                                                        data-radix-collection-item="">Reports</button><button type="button" role="tab"
+                                                        aria-selected="false" aria-controls="radix-:R1annlbq6la:-content-notifications"
+                                                        data-state="inactive" data-disabled="" disabled=""
+                                                        id="radix-:R1annlbq6la:-trigger-notifications"
+                                                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                                                        tabindex="-1" data-orientation="horizontal"
+                                                        data-radix-collection-item="">Notifications</button>
+                                                </div>
+                                                <!-- *******************************  row 2 end ********************** -->
+                            
+                            
+                                                <div data-state="active" data-orientation="horizontal" role="tabpanel"
+                                                    aria-labelledby="radix-:R1annlbq6la:-trigger-overview" id="radix-:R1annlbq6la:-content-overview"
+                                                    tabindex="0"
+                                                    class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 space-y-4"
+                                                    style="">
+                                                    <!-- ******************************* Row 3 start ********************** -->
+                            
+                                                    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                                                        <div class="rounded-xl border dark:border-darkborder bg-card text-card-foreground shadow">
+                                                            <div class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                                                <h3 class="tracking-tight  dark:text-darktext text-sm font-medium">Total Revenue</h3><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" class="h-4 w-4 text-[#71717a] dark:text-muted-foreground">
+                                                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="p-6 pt-0">
+                                                                <div class="text-2xl dark:text-darktext font-bold">$45,231.89</div>
+                                                                <p class="text-xs text-[#71717a] dark:text-muted-foreground ">+20.1% from last month</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rounded-xl border dark:border-darkborder bg-card text-card-foreground shadow">
+                                                            <div class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                                                <h3 class="tracking-tight dark:text-darktext  text-sm font-medium " id="subs">Subscriptions</h3><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" class="h-4 w-4 text-[#71717a] dark:text-muted-foreground">
+                                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                                                    <circle cx="9" cy="7" r="4"></circle>
+                                                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="p-6 pt-0">
+                                                                <div class="text-2xl dark:text-darktext  font-bold">+2350</div>
+                                                                <p class="text-xs text-[#71717a] dark:text-muted-foreground ">+180.1% from last month</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rounded-xl border dark:border-darkborder bg-card text-card-foreground shadow">
+                                                            <div class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                                                <h3 class="tracking-tight dark:text-darktext  text-sm font-medium">Sales</h3><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" class="h-4 w-4 text-[#71717a] dark:text-muted-foreground">
+                                                                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                                                    <path d="M2 10h20"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="p-6 pt-0">
+                                                                <div class="text-2xl dark:text-darktext  font-bold">+12,234</div>
+                                                                <p class="text-xs text-[#71717a] dark:text-muted-foreground ">+19% from last month</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rounded-xl border dark:border-darkborder bg-card text-card-foreground shadow">
+                                                            <div class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                                                <h3 class="tracking-tight dark:text-darktext  text-sm font-medium">Active Now</h3><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" class="h-4 w-4 text-[#71717a] dark:text-muted-foreground">
+                                                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="p-6 pt-0">
+                                                                <div class="text-2xl dark:text-darktext  font-bold">+573</div>
+                                                                <p class="text-xs text-[#71717a] dark:text-muted-foreground">+201 since last hour</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <!-- ******************************* Row 3 End ********************** -->
+                            
+                                                    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+                                                        <!-- ******************************* Graph start ********************** -->
+                            
+                                                        <div class="rounded-xl border dark:border-darkborder bg-card text-card-foreground shadow col-span-4 ">
+                                                            <div class="flex flex-col space-y-1.5 p-6">
+                                                                <h3 class="font-semibold  dark:text-darktext  leading-none tracking-tight">Overview</h3>
+                                                            </div>
+                                                            <div class="p-6 pt-0 pl-2">
+                                                                <div class="recharts-responsive-container" style="width:100%;" width="100%">
+                                                                    <div class="recharts-wrapper" role="region"
+                                                                        style="position: relative; cursor: default; width: 100%; ">
+                                                                        <svg class="recharts-surface" width="100%" viewBox="0 0 580 350">
+                                                                            <title></title>
+                                                                            <desc></desc>
+                                                                            <defs>
+                                                                                <clipPath id="recharts1-clip">
+                                                                                    <rect x="65" y="5" height="310" width="510"></rect>
+                                                                                </clipPath>
+                                                                            </defs>
+                                                                            <g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
+                                                                                <g class="recharts-cartesian-axis-ticks">
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="86.25" y="323" fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="86.25" dy="0.71em">Jan</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="128.75" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="128.75" dy="0.71em">Feb</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="171.25" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="171.25" dy="0.71em">Mar</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="213.75" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="213.75" dy="0.71em">Apr</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="256.25" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="256.25" dy="0.71em">May</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="298.75" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="298.75" dy="0.71em">Jun</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="341.25" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="341.25" dy="0.71em">Jul</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="383.75" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="383.75" dy="0.71em">Aug</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="426.25" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="426.25" dy="0.71em">Sep</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="468.75" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="468.75" dy="0.71em">Oct</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="511.25" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="511.25" dy="0.71em">Nov</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="bottom"
+                                                                                            width="510" height="30" x="553.75" y="323"
+                                                                                            fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="middle">
+                                                                                            <tspan x="553.75" dy="0.71em">Dec</tspan>
+                                                                                        </text></g>
+                                                                                </g>
+                                                                            </g>
+                                                                            <g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis">
+                                                                                <g class="recharts-cartesian-axis-ticks">
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="left"
+                                                                                            width="60" height="310" x="57" y="315" fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="end">
+                                                                                            <tspan x="57" dy="0.355em">$0</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="left"
+                                                                                            width="60" height="310" x="57" y="237.5" fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="end">
+                                                                                            <tspan x="57" dy="0.355em">$1500</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="left"
+                                                                                            width="60" height="310" x="57" y="160" fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="end">
+                                                                                            <tspan x="57" dy="0.355em">$3000</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="left"
+                                                                                            width="60" height="310" x="57" y="82.5" fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="end">
+                                                                                            <tspan x="57" dy="0.355em">$4500</tspan>
+                                                                                        </text></g>
+                                                                                    <g class="recharts-layer recharts-cartesian-axis-tick"><text
+                                                                                            stroke="none" font-size="12" orientation="left"
+                                                                                            width="60" height="310" x="57" y="9" fill="#888888"
+                                                                                            class="recharts-text recharts-cartesian-axis-tick-value text-[#71717a] dark:text-muted-foreground text-[0.70rem]"
+                                                                                            text-anchor="end">
+                                                                                            <tspan x="57" dy="0.355em">$6000</tspan>
+                                                                                        </text></g>
+                                                                                </g>
+                                                                            </g>
+                                                                            <g class="recharts-layer recharts-bar fill-primary">
+                                                                                <g class="recharts-layer recharts-bar-rectangles">
+                                                                                    <g class="recharts-layer">
+                                                                                        <g class="recharts-layer  dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="218.6016666666667" name="Jan" x="69.25"
+                                                                                                y="96.39833333333333" d="M69.25,100.39833333333333A 4,4,0,0,1,73.25,96.39833333333333L 99.25,96.39833333333333A 4,4,0,0,1,
+                                    103.25,100.39833333333333L 103.25,315L 69.25,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="99.92333333333332" name="Feb" x="111.75"
+                                                                                                y="215.07666666666668" d="M111.75,219.07666666666668A 4,4,0,0,1,115.75,215.07666666666668L 141.75,215.07666666666668A 4,4,0,0,1,
+                                    145.75,219.07666666666668L 145.75,315L 111.75,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="107.72499999999997" name="Mar" x="154.25"
+                                                                                                y="207.27500000000003" d="M154.25,211.27500000000003A 4,4,0,0,1,158.25,207.27500000000003L 184.25,207.27500000000003A 4,4,0,0,1,
+                                    188.25,211.27500000000003L 188.25,315L 154.25,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="115.11333333333334" name="Apr" x="196.75"
+                                                                                                y="199.88666666666666" d="M196.75,203.88666666666666A 4,4,0,0,1,200.75,199.88666666666666L 226.75,199.88666666666666A 4,4,0,0,1,
+                                    230.75,203.88666666666666L 230.75,315L 196.75,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="184.50166666666667" name="May" x="239.25"
+                                                                                                y="130.49833333333333" d="M239.25,134.49833333333333A 4,4,0,0,1,243.25,130.49833333333333L 269.25,130.49833333333333A 4,4,0,0,1,
+                                    273.25,134.49833333333333L 273.25,315L 239.25,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="127.41" name="Jun" x="281.75" y="187.59" d="M281.75,191.59A 4,4,0,0,1,285.75,187.59L 311.75,187.59A 4,4,0,0,1,
+                                    315.75,191.59L 315.75,315L 281.75,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="269.855" name="Jul" x="324.25"
+                                                                                                y="45.14499999999998" d="M324.25,49.14499999999998A 4,4,0,0,1,328.25,45.14499999999998L 354.25,45.14499999999998A 4,4,0,0,1,
+                                    358.25,49.14499999999998L 358.25,315L 324.25,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="201.965" name="Aug" x="366.75" y="113.035"
+                                                                                                d="M366.75,117.035A 4,4,0,0,1,370.75,113.035L 396.75,113.035A 4,4,0,0,1,
+                                    400.75,117.035L 400.75,315L 366.75,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="258.385" name="Sep" x="409.25"
+                                                                                                y="56.614999999999995" d="M409.25,60.614999999999995A 4,4,0,0,1,413.25,56.614999999999995L 439.25,56.614999999999995A 4,4,0,0,1,
+                                    443.25,60.614999999999995L 443.25,315L 409.25,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="286.905" name="Oct" x="451.75"
+                                                                                                y="28.095000000000006" d="M451.75,32.095000000000006A 4,4,0,0,1,455.75,28.095000000000006L 481.75,28.095000000000006A 4,4,0,0,1,
+                                    485.75,32.095000000000006L 485.75,315L 451.75,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="227.43666666666667" name="Nov" x="494.25"
+                                                                                                y="87.56333333333333" d="M494.25,91.56333333333333A 4,4,0,0,1,498.25,87.56333333333333L 524.25,87.56333333333333A 4,4,0,0,1,
+                                    528.25,91.56333333333333L 528.25,315L 494.25,315Z"></path>
+                                                                                        </g>
+                                                                                        <g class="recharts-layer dark:text-darktext  recharts-bar-rectangle" role="img">
+                                                                                            <path fill="currentColor" radius="4,4,0,0"
+                                                                                                class="recharts-rectangle fill-primary" width="34"
+                                                                                                height="213.95166666666668" name="Dec" x="536.75"
+                                                                                                y="101.04833333333332" d="M536.75,105.04833333333332A 4,4,0,0,1,540.75,101.04833333333332L 566.75,101.04833333333332A 4,4,0,0,1,
+                                    570.75,105.04833333333332L 570.75,315L 536.75,315Z"></path>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                </g>
+                                                                                <g class="recharts-layer"></g>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- ******************************* Graph End ********************** -->
+                            
+                                                        <!-- ******************************* Sales start ********************** -->
+                            
+                                                        <div class="rounded-xl border dark:border-darkborder bg-card text-card-foreground shadow col-span-3">
+                                                            <div class="flex flex-col space-y-1.5 p-6">
+                                                                <h3 class="font-semibold  dark:text-darktext leading-none tracking-tight">Recent Sales</h3>
+                                                                <p class="text-sm text-[#71717a] dark:text-muted-foreground">You made 265 sales this month.</p>
+                                                            </div>
+                                                            <div class="p-6 pt-0">
+                                                                <div class="space-y-8">
+                                                                    <div class="flex items-center"><span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                                                class="aspect-square h-full w-full" alt="Avatar"
+                                                                                src="assests/images/profile.png"></span>
+                                                                        <div class="ml-4 space-y-1">
+                                                                            <p class="text-sm dark:text-darktext  font-medium leading-none">Olivia Martin</p>
+                                                                            <p class="text-sm text-[#71717a] dark:text-muted-foreground ">olivia.martin@email.com
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ml-auto dark:text-darktext  font-medium">+$1,999.00</div>
+                                                                    </div>
+                                                                    <div class="flex items-center"><span
+                                                                            class="relative shrink-0 overflow-hidden rounded-full flex h-9 w-9 items-center justify-center space-y-0 border"><img
+                                                                                class="aspect-square h-full w-full" alt="Avatar"
+                                                                                src="assests/images/profile2.png"></span>
+                                                                        <div class="ml-4 space-y-1">
+                                                                            <p class="text-sm dark:text-darktext  font-medium leading-none">Jackson Lee</p>
+                                                                            <p class="text-sm text-[#71717a] dark:text-muted-foreground ">jackson.lee@email.com
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ml-auto dark:text-darktext  font-medium">+$39.00</div>
+                                                                    </div>
+                                                                    <div class="flex items-center"><span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                                                class="aspect-square h-full w-full" alt="Avatar"
+                                                                                src="assests/images/profile3.png"></span>
+                                                                        <div class="ml-4 space-y-1">
+                                                                            <p class="text-sm dark:text-darktext  font-medium leading-none">Isabella Nguyen</p>
+                                                                            <p class="text-sm text-[#71717a] dark:text-muted-foreground ">
+                                                                                isabella.nguyen@email.com</p>
+                                                                        </div>
+                                                                        <div class="ml-auto dark:text-darktext  font-medium">+$299.00</div>
+                                                                    </div>
+                                                                    <div class="flex items-center"><span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                                                class="aspect-square h-full w-full" alt="Avatar"
+                                                                                src="assests/images/profile4.png"></span>
+                                                                        <div class="ml-4 space-y-1">
+                                                                            <p class="text-sm  dark:text-darktext font-medium leading-none">William Kim</p>
+                                                                            <p class="text-sm text-[#71717a] dark:text-muted-foreground ">will@email.com</p>
+                                                                        </div>
+                                                                        <div class="ml-auto dark:text-darktext  font-medium">+$99.00</div>
+                                                                    </div>
+                                                                    <div class="flex items-center"><span
+                                                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                                                class="aspect-square h-full w-full" alt="Avatar"
+                                                                                src="assests/images/profile5.png"></span>
+                                                                        <div class="ml-4 space-y-1">
+                                                                            <p class="text-sm  dark:text-darktext font-medium leading-none">Sofia Davis</p>
+                                                                            <p class="text-sm text-[#71717a] dark:text-muted-foreground ">sofia.davis@email.com
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ml-auto  dark:text-darktext font-medium">+$39.00</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <!-- ******************************* Sales End ********************** -->
+                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- ******************************* Dashboard End ********************** -->
+                            
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assests/script/script.js"></script>
+</body>
+
+</html>
