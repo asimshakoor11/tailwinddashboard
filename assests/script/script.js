@@ -2,8 +2,6 @@
 
 
 
-
-alert("Don't forget to visit settings page")
 let leftside = document.getElementById("leftside")
 let closediv = document.getElementById("closediv")
 
@@ -309,3 +307,11 @@ window.onclick = function (event) {
         listbox.classList.add("hidden");
     }
 }
+
+function alert1(){
+    alert("Don't forget to visit settings page \n and theme switch functionality")
+}
+
+setTimeout(alert1, 5000)
+
+
